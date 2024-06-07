@@ -1,8 +1,11 @@
 import React from 'react'
+import Navbar from './Navbar'
 
 const ViewPost = () => {
     return (
         <div>
+
+<Navbar/>
 
             <div className="container">
                 <div className="row">
