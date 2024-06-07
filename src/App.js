@@ -5,21 +5,26 @@ import Search from './components/Search';
 import Delete from './components/Delete';
 import ViewPost from './components/ViewPost';
 import Navbar from './components/Navbar';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 function App() {
   return (
-    <div>
 
-      <br></br>
-     <AddPost/>
-     <br></br>
-     <Search/>
-     <br></br>
-     <Delete/>
-<br></br>
-<ViewPost/>
+    <BrowserRouter>
 
-    </div>
+      <Routes>
+
+        <Route path='/' element={<AddPost />} />
+        <Route path='/search' element={<Search />} />
+        <Route path='/delete' element={<Delete />} />
+        <Route path='/view' element={<ViewPost/>} />
+
+      </Routes>
+
+
+    </BrowserRouter>
+
+
   );
 }
 
